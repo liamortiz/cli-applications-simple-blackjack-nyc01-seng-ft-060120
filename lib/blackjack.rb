@@ -20,7 +20,7 @@ end
 
 def get_user_input
   # code #get_user_input here
-  return gets.strip
+  gets.strip
 end
 
 def end_game(card_total)
@@ -40,16 +40,6 @@ def hit?(card_total)
   
   prompt_user
   input = get_user_input
-  
-  while input != 's' or input != 'h' do
-    prompt_user
-    invalid_command
-    input = get_user_input
-  end
-  
-  if input == 'h'
-    card_total += deal_card
-  end
   
   return card_total
 end
